@@ -178,7 +178,7 @@
                                         <img src="https://lh3.googleusercontent.com/-lHmEsP7U6rg/YAl9i1aPXXI/AAAAAAAAAHc/6-IdXAksmU0rp1xXJboVIa0RryfT-V98gCEwYBhgLKtMDAL1OcqzNyw6dsAHNScg8FcmDM8QrP1I3Ho33kvXp-NnAUl31lY31KnEet5ViW4_todh5cihQparDN9PJ1WFYd72z0-fz0KEDYI3nVMS4dfOdaWuKyItZsqGHZdPy5KtkWrmxGiNnEwCS7CzNg08uEw4SxtjMlFUtHua2pZMI9s1_C3L4kcOmRCKhXButTtd0FtnImLvDQa-WcVKZxRm5mz1KnG-kWht2HhnstTzp7992qB8sqJCtiAUuD_nXcM-tlg5yNzOsH4NmShOISxJ4sbpJ6Yurx1NPH2wFf_HAcCW0sgxHdkwhbg5Flfpai-WADiFSKq6m2Oy3zDtHSJNDP8eCyAix9iu2urJEVi_a4nkKRhgCOlKEBYlpajM9X9W5RpI_wENVGpg3rGFWihrVcgZY17P55qw200-Lv5bUj5Ndwuf6XWAKiwf6d9U0fNWDqlz3Gtmt06JTz6ENSvrkGtR0sgBwD1MFWnsd8eAi6b9-RMWDf2uN4ZQYEYDbnNMh7tJ89A8b03X1_l90dsbWlqw9tPoQ_r0s97yNzW6OydDN4B2xwQTLDncftxvHJaNmqqktUTXTRLHQ6ch_TVbEOdwM3u_yodWDQo_KVAFXsNVYQ6ows6zhgQY/w139-h140-p/61437896_2310298219289327_7566582316454117376_o.jpg" alt="John Doe"/>
                                     </div>
                                     <div class="content">
-                                        <a class="js-acc-btn" href="#">Duy Tự</a>
+                                        <a class="js-acc-btn" href="#">ADmin: Duy Tự</a>
                                     </div>
                                     <div class="account-dropdown js-dropdown">
                                         <div class="info clearfix">
@@ -190,7 +190,7 @@
                                             </div>
                                             <div class="content">
                                                 <h5 class="name">
-                                                    <a href="#">Duy Tự</a>
+                                                    <a href="#">Chủ Tịch</a>
                                                 </h5>
                                                 <span class="email">Liên hệ tôi: 0799048174</span>
                                             </div>
@@ -206,7 +206,7 @@
                                             </div>
                                         </div>
                                         <div class="account-dropdown__footer">
-                                            <a href="/nome">
+                                            <a href="/logout">
                                                 <i class="zmdi zmdi-power"></i>Logout</a>
                                         </div>
                                     </div>

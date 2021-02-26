@@ -10,7 +10,7 @@ import javax.servlet.http.HttpSession;
 import java.io.IOException;
 
 
-@WebFilter(filterName = "LoginFilter", urlPatterns = {"/note","/demo","/dashboard"})
+@WebFilter(filterName = "LoginFilter", urlPatterns = {"/note","/demo","/dashboard","/logout"})
 public class LoginFilter implements Filter {
 
     public void doFilter(ServletRequest req, ServletResponse resp, FilterChain chain) throws ServletException, IOException {
