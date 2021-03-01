@@ -127,27 +127,27 @@
                     </li>
 
                     <li>
-                        <a href="chart.html">
+                        <a href="/listmany.jsp">
                             <i class="fas fa-chart-bar"></i>Cho đời sống</a>
                     </li>
                     <li class="active">
-                        <a href="table.html">
+                        <a href="/listmany.jsp">
                             <i class="fas fa-table"></i>Cho công việc</a>
                     </li>
                     <li>
-                        <a href="form.html">
+                        <a href="/listmany.jsp">
                             <i class="far fa-check-square"></i>Cho trường học</a>
                     </li>
                     <li>
-                        <a href="calendar.html">
+                        <a href="/listmany.jsp">
                             <i class="fas fa-calendar-alt"></i>Cho gia đình</a>
                     </li>
                     <li>
-                        <a href="map.html">
+                        <a href="/listmany.jsp">
                             <i class="fas fa-map-marker-alt"></i>Viết nhật kí</a>
                     </li>
                     <li class="has-sub">
-                        <a class="js-arrow" href="#">
+                        <a href="/listmany.jsp">
                             <i class="fas fa-copy"></i>Viết nhắc nhở</a>
 
                 </ul>
@@ -190,19 +190,9 @@
                                             </div>
                                             <div class="content">
                                                 <h5 class="name">
-                                                    <a href="#">Chủ Tịch</a>
+                                                    <a href="https://www.facebook.com/profile.php?id=100009275134964">Chủ Tịch</a>
                                                 </h5>
                                                 <span class="email">Liên hệ tôi: 0799048174</span>
-                                            </div>
-                                        </div>
-                                        <div class="account-dropdown__body">
-                                            <div class="account-dropdown__item">
-                                                <a href="#">
-                                                    <i class="zmdi zmdi-account"></i>Account</a>
-                                            </div>
-                                            <div class="account-dropdown__item">
-                                                <a href="/adminl">
-                                                    <i class="zmdi zmdi-settings"></i>ADMIN</a>
                                             </div>
                                         </div>
                                         <div class="account-dropdown__footer">

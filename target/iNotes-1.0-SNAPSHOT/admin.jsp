@@ -140,27 +140,27 @@
                     </li>
 
                     <li>
-                        <a href="chart.html">
+                        <a href="/listmany.jsp">
                             <i class="fas fa-chart-bar"></i>Cho đời sống</a>
                     </li>
                     <li class="active">
-                        <a href="table.html">
+                        <a href="/listmany.jsp">
                             <i class="fas fa-table"></i>Cho công việc</a>
                     </li>
                     <li>
-                        <a href="form.html">
+                        <a href="/listmany.jsp">
                             <i class="far fa-check-square"></i>Cho trường học</a>
                     </li>
                     <li>
-                        <a href="calendar.html">
+                        <a href="/listmany.jsp">
                             <i class="fas fa-calendar-alt"></i>Cho gia đình</a>
                     </li>
                     <li>
-                        <a href="map.html">
+                        <a href="/listmany.jsp">
                             <i class="fas fa-map-marker-alt"></i>Viết nhật kí</a>
                     </li>
                     <li class="has-sub">
-                        <a class="js-arrow" href="#">
+                        <a class="js-arrow" href="/listmany.jsp">
                             <i class="fas fa-copy"></i>Viết nhắc nhở</a>
 
                 </ul>
@@ -176,12 +176,7 @@
             <div class="section__content section__content--p30">
                 <div class="container-fluid">
                     <div class="header-wrap">
-                        <form class="form-header" action="/note?action=search" method="POST">
-                            <input class="au-input au-input--xl" type="text" name="id"
-                                   placeholder="tìm kiếm ghi chú theo id"/>
-                            <button class="au-btn--submit" type="submit">
-                                <i class="zmdi zmdi-search"></i>
-                            </button>
+
                         </form>
                         <div class="header-button">
 

@@ -71,6 +71,7 @@
                 <div class="col-12 col-md-12">
                     <h3 class="title-5 m-b-35">Note</h3>
                 </div>
+
                 <div class="row ml-3 mb-3">
                     <a href="note" type="button" class="btn btn-primary">Exit</a>
                 </div>

@@ -103,27 +103,27 @@
                 <ul class="list-unstyled navbar__list">
 
                     <li>
-                        <a href="chart.html">
+                        <a href="/listmany.jsp">
                             <i class="fas fa-chart-bar"></i>Cho Công Việc</a>
                     </li>
                     <li>
-                        <a href="table.html">
+                        <a href="/listmany.jsp">
                             <i class="fas fa-table"></i>Cho đời sống</a>
                     </li>
                     <li>
-                        <a href="form.html">
+                        <a href="/listmany.jsp">
                             <i class="far fa-check-square"></i>Cho trường học</a>
                     </li>
                     <li>
-                        <a href="calendar.html">
+                        <a href="/listmany.jsp">
                             <i class="fas fa-calendar-alt"></i>Cho gia đình</a>
                     </li>
                     <li>
-                        <a href="map.html">
+                        <a href="/listmany.jsp">
                             <i class="fas fa-map-marker-alt"></i>Viết Nhật kí</a>
                     </li>
                     <li class="has-sub">
-                        <a class="js-arrow" href="#">
+                        <a class="js-arrow" href="/listmany.jsp">
                             <i class="fas fa-copy"></i>Viết Nhắc nhở</a>
 
                     </li>
