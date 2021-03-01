@@ -114,8 +114,8 @@
 
     <!-- MENU SIDEBAR-->
     <aside class="menu-sidebar d-none d-lg-block">
-        <div class="logo">
-            <a href="#">
+        <div class="logo" style="background: #fff; box-shadow: none">
+        <a href="#">
                 <img src="images/icon/download.png" alt="Cool Admin"/>
             </a>
         </div>
