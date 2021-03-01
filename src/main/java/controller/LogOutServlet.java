@@ -18,6 +18,6 @@ public class LogOutServlet extends HttpServlet {
         HttpSession session = request.getSession();
         session.removeAttribute("user");
         session.invalidate();
-        response.sendRedirect("/login");
+        response.sendRedirect("/home");
     }
 }

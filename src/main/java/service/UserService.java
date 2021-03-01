@@ -2,16 +2,16 @@ package service;
 
 import dao.BaseDAO;
 import model.Login;
+import model.Note;
+import model.NoteType;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
+import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
 
 public class UserService implements BaseService<Login> {
-
+  BaseDAO baseDAO = new BaseDAO();
     private final String FINDALL_SQL="SELECT * FROM login";
     private final String FINDBYID_SQL="SELECT * FROM login WHERE id=?";
     private final String FINDBYUP_SQL= "SELECT * FROM login WHERE fullname=? AND pass=?";
@@ -19,22 +19,27 @@ public class UserService implements BaseService<Login> {
     private final String UPDATE_SQL="UPDATE login SET pass=?,fullname=? WHERE id=?";
     private final String DELETE_SQL="DELETE FROM login WHERE id=?";
 
-    BaseDAO baseDAO = new BaseDAO();
+    private final String SELECTBY_USER_ID ="call deleteLogin(?)";
+    private final String SELECT_LOGIN="call inotes.select_login(?)";
+
     @Override
     public List<Login> findAll() {
         // TODO Auto-generated method stub
 
         List<Login> rt = new ArrayList<>();
 
+
         try (Connection connection = baseDAO.getConnection();
-             PreparedStatement st = connection.prepareStatement(FINDALL_SQL)) {
+           PreparedStatement st = connection.prepareStatement(FINDALL_SQL)) {
+
             ResultSet rs = st.executeQuery();
 
             while (rs.next()) {
                 int id = rs.getInt("id");
                 String fullname = rs.getString("fullname");
-                String username = rs.getString("username");
-                rt.add(new Login(id,username,fullname));
+                String password = rs.getString("pass");
+              Login login = new Login(id,fullname,password);
+              rt.add(login);
             }
         } catch (Exception ex) {
             ex.printStackTrace();
@@ -100,12 +105,9 @@ public class UserService implements BaseService<Login> {
         try (Connection connection = baseDAO.getConnection();
              PreparedStatement st = connection.prepareStatement(this.SAVE_SQL)) {
             //THIET LAP THAM SO
-            st.setString(1, object.getUsername());
             st.setString(2, object.getPassword());
-            st.setString(3, object.getFullname());
-
+            st.setString(1, object.getFullname());
             st.executeUpdate();
-
         } catch (Exception ex) {
             ex.printStackTrace();
         }
@@ -131,19 +133,49 @@ public class UserService implements BaseService<Login> {
     @Override
     public void delete(int id) {
         // TODO Auto-generated method stub
-        try (Connection connection =baseDAO.getConnection();
+        try (Connection connection = baseDAO.getConnection();
              PreparedStatement st = connection.prepareStatement(this.DELETE_SQL)) {
-            //THIET LAP THAM SO
-
-            st.setInt(1,id );
+            st.setInt(1, id);
 
             st.executeUpdate();
 
         } catch (Exception ex) {
             ex.printStackTrace();
         }
+
+    }
+        public void deletelogin(int id) {
+            // TODO Auto-generated method stub
+            try (Connection connection =baseDAO.getConnection();
+                 CallableStatement st = connection.prepareCall(this.SELECTBY_USER_ID)) {
+                st.setInt(1,id );
+                st.executeUpdate();
+            } catch (Exception ex) {
+                ex.printStackTrace();
+            }
     }
 
-
+    public List<Note> selectlogin(int iddata) {
+        List<Note> rt = new ArrayList<>();
+        try (Connection connection = baseDAO.getConnection();
+             CallableStatement st = connection.prepareCall(this.SELECT_LOGIN)) {
+            st.setInt(1,iddata );
+            ResultSet rs = st.executeQuery();
+            while (rs.next()) {
+                int id = rs.getInt("id");
+                String title = rs.getString("title");
+                String content = rs.getString("content");
+                int type_id = rs.getInt("type_id");
+                String name = rs.getString("name");
+                String description = rs.getString("description");
+                NoteType noteType = new NoteType(type_id,name,description);
+                Note note = new Note(id, title, content, noteType);
+                rt.add(note);
+            }
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
+        return rt;
+    }
 
 }

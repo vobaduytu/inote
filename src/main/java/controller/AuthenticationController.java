@@ -39,6 +39,7 @@ public class AuthenticationController extends HttpServlet {
             case "logout":
                 showLogout(request,response);
                 break;
+
         }
     }
     private void showLogin(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

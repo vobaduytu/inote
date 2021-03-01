@@ -201,8 +201,8 @@
                                                     <i class="zmdi zmdi-account"></i>Account</a>
                                             </div>
                                             <div class="account-dropdown__item">
-                                                <a href="#">
-                                                    <i class="zmdi zmdi-settings"></i>Setting</a>
+                                                <a href="/adminl">
+                                                    <i class="zmdi zmdi-settings"></i>ADMIN</a>
                                             </div>
                                         </div>
                                         <div class="account-dropdown__footer">

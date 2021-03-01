@@ -148,10 +148,16 @@
                         <div class="col-md-12">
                             <div class="overview-wrap">
                                 <h2 class="title-1">overview</h2>
+                                <a href="/adminl" class="au-btn au-btn-icon au-btn--blue">
+                                    <i class="zmdi zmdi-account"></i>ADMIN
+                                </a>
                                 <form action="/login">
                                     <button class="au-btn au-btn-icon au-btn--blue">
                                         <i class="zmdi zmdi-plus"></i>Đăng Nhập
                                     </button>
+                                    <a href="/addUser" class="au-btn au-btn-icon au-btn--blue">
+                                        <i class="zmdi zmdi-plus"></i>Đăng kí
+                                    </a>
                                 </form>
 
                             </div>

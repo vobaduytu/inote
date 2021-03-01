@@ -1,3 +1,16 @@
+<%--
+  Created by IntelliJ IDEA.
+  User: Asus
+  Date: 2/26/2021
+  Time: 5:00 PM
+  To change this template use File | Settings | File Templates.
+--%>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<html>
+<head>
+    <title>Title</title>
+</head>
+<body>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--&lt;%&ndash;--%>
 <%--  Created by IntelliJ IDEA.--%>
@@ -109,7 +122,7 @@
 <body class="animsition">
 <div class="page-wrapper">
     <!-- HEADER MOBILE-->
-<%----%>
+    <%----%>
     <!-- END HEADER MOBILE-->
 
     <!-- MENU SIDEBAR-->
@@ -123,7 +136,7 @@
             <nav class="navbar-sidebar">
                 <ul class="list-unstyled navbar__list">
                     <li>
-                        <a href="/note?action=insertNote">Thêm Ghi Chú mới</a>
+                        <a href="/note?action=insertNote">Thêm tài khoản mới</a>
                     </li>
 
                     <li>
@@ -231,23 +244,23 @@
                                     <thead>
                                     <tr>
                                         <th>STT</th>
-                                        <th>Tiêu Đề</th>
-                                        <th>Phân Loại</th>
+                                        <th>tài khoản</th>
+                                        <th>Mật khẩu</th>
                                         <th>Hoạt động</th>
                                     </tr>
                                     </thead>
                                     <tbody>
 
-                                    <c:forEach items="${noteList}" var="note">
+                                    <c:forEach items="${loginList}" var="note">
                                         <tr>
-                                            <td scope="row">${note.id}</td>
-                                            <td>${note.title}</td>
-                                            <td>${note.noteType.name}</td>
+                                            <td>${note.id}</td>
+                                            <td>${note.fullname}</td>
+                                            <td>${note.password}</td>
                                             <td>
-                                                <a href="${pageContext.request.contextPath}/note?action=delete&id=${note.id}"
+                                                <a href="${pageContext.request.contextPath}/adminl?action=delete&id=${note.id}"
                                                    onclick="return confirm('co chac muon xoa khong?')">Xóa
                                                     |</a>
-                                                <a href="${pageContext.request.contextPath}/note?action=updateNote&id=${note.id}">Sửa</a>
+                                                <a href="${pageContext.request.contextPath}/adminl?action=selectlogin&id=${note.id}">xem trộm</a>
                                             </td>
                                         </tr>
                                     </c:forEach>
@@ -299,3 +312,6 @@
 
 </html>
 <!-- end document-->
+
+</body>
+</html>

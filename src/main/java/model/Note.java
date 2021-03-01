@@ -5,7 +5,7 @@ public class Note {
     private String title;
     private String content;
     private NoteType noteType;
-private Login login;
+    private Login login;
 
     public Note(int id, String title, String content, NoteType noteType, Login login) {
         this.id = id;

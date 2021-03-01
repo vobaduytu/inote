@@ -34,5 +34,8 @@ public class LoginServive implements BaseService<Login> {
       return  userService.findByUsernamePassword(username,password);
 
   }
+    public void addUser(Login object) {
+        userService.save(object);
+    }
 
 }

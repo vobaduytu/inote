@@ -1,5 +1,6 @@
 package dao;
 
+import model.Login;
 import model.Note;
 import model.NoteType;
 
@@ -24,7 +25,7 @@ public class NoteDAO extends BaseDAO implements IBaseDAO<Note> {
             "WHERE id=? ";
 
     private static final String FINDBYUP_SQL = "SELECT * FROM users WHERE username=? AND password=?";
-    private final String SELECTBY_USER_ID ="SELECT note.id, note.title, note.content, note.type_id, note_type.name, " +
+    private final String SELECTBY_USER_ID = "SELECT note.id, note.title, note.content, note.type_id, note_type.name, " +
             "note_type.description FROM note LEFT JOIN note_type ON note.type_id = note_type.id where id_user=?";
 
 
@@ -57,7 +58,7 @@ public class NoteDAO extends BaseDAO implements IBaseDAO<Note> {
              PreparedStatement statement = connection.prepareStatement(SELECTBY_USER_ID);
 
         ) {
-            statement.setInt(1,userId);
+            statement.setInt(1, userId);
             ResultSet rs = statement.executeQuery();
             while (rs.next()) {
                 int id = rs.getInt("id");
@@ -74,8 +75,9 @@ public class NoteDAO extends BaseDAO implements IBaseDAO<Note> {
         }
         return list;
     }
+
     @Override
-    public void insert(Note note)  throws SQLException {
+    public void insert(Note note) throws SQLException {
         try
                 (Connection connection = getConnection();
                  PreparedStatement statement = connection.prepareStatement(ADD)
@@ -83,7 +85,7 @@ public class NoteDAO extends BaseDAO implements IBaseDAO<Note> {
             statement.setString(1, note.getTitle());
             statement.setString(2, note.getContent());
             statement.setInt(3, note.getNoteType().getId());
-            statement.setInt(4,note.getLogin().getId());
+            statement.setInt(4, note.getLogin().getId());
             statement.executeUpdate();
         }
 

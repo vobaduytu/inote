@@ -46,9 +46,25 @@ public class Login {
         this.is_deleted = is_deleted;
     }
     //Constructor
-    public Login(int id,String username, String fullname) {
-        this.id=id;
+
+
+    public Login(int id, String fullname, String password) {
+        this.id = id;
         this.fullname = fullname;
-        this.username = username;
+        this.password = password;
+
     }
+
+    public Login(String password, String fullname, int status, boolean is_deleted) {
+        this.password = password;
+        this.fullname = fullname;
+        this.status = status;
+        this.is_deleted = is_deleted;
+    }
+
+    public Login(String password, String fullname) {
+        this.password = password;
+        this.fullname = fullname;
+    }
+
 }

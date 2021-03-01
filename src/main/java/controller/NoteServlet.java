@@ -178,8 +178,6 @@ public class NoteServlet extends HttpServlet {
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         }
-
-
         RequestDispatcher dispatcher = request.getRequestDispatcher("listNote.jsp");
         dispatcher.forward(request, response);
     }
